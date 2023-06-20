@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import './product.css';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { BsArrowRightCircle } from 'react-icons/bs';
@@ -27,11 +27,15 @@ const ProductCard = () => {
                 <h2 className="text-[36px] w-[312px] h-[55px] font-regular mt-10">
                     Headphone-128K
                 </h2>
-                <button
-                    className="button text-[25px] rounded-full py-2 px-10 mt-12 transition-all duration-300 ease-in-out w-[340px] h-[86px] flex justify-between items-center border-product"
-                >
-                    View <BsArrowRightCircle size={47} />
-                </button>
+                <div className="button-container">
+                    <Link href="/productDet">
+                        <li className="button text-[25px] font-semibold h-[86px] rounded-full py-2 px-10 mt-12 transition-all duration-300 ease-in-out flex justify-between items-center border-product">
+                            <span>View</span>
+                            <BsArrowRightCircle size={47} />
+                        </li>
+                    </Link>
+                </div>
+
             </div>
         </div >
     );
