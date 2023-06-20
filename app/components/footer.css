@@ -1,0 +1,21 @@
+.circle {
+  background: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: x-axis 6s infinite linear;
+}
+.wrapper {
+  animation: y-axis 1s infinite ease-in-out;
+}
+
+@keyframes x-axis {
+  50% {
+    transform: translateX(1200px);
+  }
+}
+@keyframes y-axis {
+  50% {
+    transform: translateY(200px);
+  }
+}
