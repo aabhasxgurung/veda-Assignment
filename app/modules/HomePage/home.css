@@ -5,3 +5,60 @@
   background-color: white; /* Or any other color you prefer */
   margin: 0 4px; /* Adjust the margin as needed */
 }
+
+#main button {
+  background-color: transparent;
+  background-image: linear-gradient(
+    to left,
+    transparent 50%,
+    #920aa8 2%,
+    #e019cc 20%,
+    #ff81e3 48%,
+    #fc75d6 52%,
+    #df55f6 60%,
+    #e822ec 71%,
+    #e80f91 75%,
+    #ee19d8 81.25%,
+    #fe3873 100%
+  );
+  background-size: 200% auto;
+  background-position: 100% 50%;
+}
+
+#main button:hover {
+  background-position: 0% 50%;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+#main button.gradient-border {
+  border-width: 5px;
+
+  border-image: linear-gradient(
+    90deg,
+    #920aa8 2%,
+    #e019cc 20%,
+    #ff81e3 48%,
+    #fc75d6 52%,
+    #df55f6 60%,
+    #e822ec 71%,
+    #e80f91 75%,
+    #ee19d8 81.25%,
+    #fe3873 100%
+  );
+}
+#main .logo-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: letterAnimation 1s ease-in forwards;
+}
+
+@keyframes letterAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
