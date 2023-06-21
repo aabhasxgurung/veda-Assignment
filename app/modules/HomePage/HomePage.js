@@ -1,58 +1,62 @@
-import React from 'react';
-import Card from '../../components/Card';
-import "./home.css"
-import HomeProduct from './HomeProduct';
+'use client';
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { BsArrowRightCircle } from 'react-icons/bs';
+import './home.css';
+
 
 const HomePage = () => {
-    return (
-        <div id='main' className="relative">
-            <img
-                src="/images/homebg.png"
-                alt=""
-                className="filter brightness-50 dark:brightness-50 h-3/4 w-full object-cover"
-            />
-            <div className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                <h1 className="font-routhem text-[60px] text-[#F903AA] shadow-md">LOGO ELECTRONICS</h1>
-                <p className="font-routhem text-white text-[21px]  mb-16">THE TECHIES YOU LOVE</p>
-                <button
-                    className="font-routhem flex items-center justify-between ml-[80px]  border-[5px] text-[20px] rounded-full text-white transition-all duration-500 ease-in-out hover:scale-105  px-10 h-[82px] w-[483px] py-2 mt-4">
-                    View All Products
-                    <BsArrowRightCircle size={47} />
-                </button>
-            </div>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 ">
-                <div className="flex gap-[112px]">
-                    <Card
-                        imageSrc="/images/alienware.png"
-                        name="Alienware"
-                        description="Alienware Description"
-                        price="$200"
-                    />
-                    <Card
-                        imageSrc="/images/p11 1.png"
-                        name="Keyboard"
-                        description="AZERTY Keyboard"
-                        price="$300"
+    const [letters, setLetters] = useState([]);
 
-                    />
-                    <Card
-                        imageSrc="/images/p9 1.png"
-                        name="Desktop"
-                        description="AZERTY Desktop"
-                        price="$250"
-                    />
-                    <Card
-                        imageSrc="/images/p8 1.png"
-                        name="Headphone"
-                        description="Wireless Headphone"
-                        price="$250"
-                    />
+    useEffect(() => {
+        setLetters(Array.from('Logo Electronics'));
+    }, []);
+
+    return (
+        <div className='w-screen relative flex justify-center items-center mt-1.5 overflow-hidden bg-[#380D41]'>
+            {/* image */}
+            <div className='w-full'>
+                <img src='images/Homebg.png' alt='Logo' className='w-full h-full mt-0 object-cover' />
+            </div>
+
+            {/* heading inside image */}
+            <div id='main' className='absolute top-[160px] transform -translate-y-1/2 text-center'>
+
+                <h1 className='text-[60px] font-semibold text-[#F903AA] w-[602px] font-routhem leading-[129px] mt-[160px]'>
+
+                    {/* heading animation */}
+                    {letters.map((letter, index) => (
+                        <span
+                            key={index}
+                            className='logo-letter'
+                            style={{
+                                animation: `letterAnimation 0.8s ease-in forwards`,
+                                animationDelay: `${index * 0.1}s`,
+                            }}
+                        >
+                            {letter}
+                        </span>
+                    ))}
+                </h1>
+
+                <div className='flex justify-center items-center'>
+                    {/* horizontal lines */}
+                    <div className='flex-grow h-2 w-16 bg-gradient-to-r from-[#A8620A] via-[#E09519] to-[#FEB838] my-1 rounded-full'></div>
+                    <p className='text-[20px] mx-4 font-routhem uppercase tracking-widest text-white'>
+                        The techies you love
+                    </p>
+                    {/* horizontal lines */}
+                    <div className='flex-grow h-2 w-16 bg-gradient-to-r from-[#A8620A] via-[#E09519] to-[#FEB838] my-1 rounded-full'></div>
+                </div>
+
+                <div className='flex items-center p-6 mt-[74px]'>
+                    <button className='font-routhem text-left border-[5px] text-[20px] rounded-full text-white hover:scale-105 duration-300 ease-in-out px-10 h-[82px] w-[483px] py-2 relative'>
+                        View All Products
+                        <BsArrowRightCircle size={47} className='w-[46.97px] h-[46.97px] ml-[46px] absolute top-[50%] -translate-y-1/2 right-4' />
+                    </button>
                 </div>
             </div>
         </div>
-
-
     );
 };
 

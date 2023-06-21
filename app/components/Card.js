@@ -1,30 +1,27 @@
-import React from 'react';
-import "./detail.css"
-import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
+import React from 'react'
+import Image from 'next/image'
+import './card.css'
 
-const DetailCard = () => {
+
+
+
+const Card = ({ pname, imageSrc, description, price, size }) => {
     return (
-        <div className="flex justify-center flex-col items-center">
-            <div className="flex justify-center gap-14">
-                <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                    <img src="images/p8 1.png" alt="" className="w-full h-full" />
-                </div>
-                <div className="w-[300px] h-[391px] rounded-lg bg-white ml-4 border-gold">
-                    <img src="images/p8 1.png" alt="" className="w-full h-full" />
-                </div>
-                <div className="w-[300px] h-[391px] rounded-lg bg-white ml-4 border-gold">
-                    <img src="images/p8 1.png" alt="" className="w-full h-full" />
-                </div>
-                <div className="w-[300px] h-[391px] rounded-lg bg-white ml-4 border-gold">
-                    <img src="images/p8 1.png" alt="" className="w-full h-full" />
-                </div>
-            </div>
-            <div className="flex mt-4">
-                <BsArrowLeftCircle className="text-3xl mr-2" />
-                <BsArrowRightCircle className="text-3xl" />
-            </div>
+
+        <div id='card' className="w-[300px] h-[391px] bg-white  p-6 shadow-md border-4 gradient-border ">
+            <img
+                src={imageSrc}
+                alt="Product Image"
+                className={size}
+
+            />
+
+            <p className=" text-black font-bold">{pname}</p>
+            <p className="text-[#0A0A0A] mt-[8.6px]">{description}</p>
+            <p className="text-purple-900 font-bold mt-[10.85px]">{price}</p>
+
         </div>
     );
 };
 
-export default DetailCard;
+export default Card;

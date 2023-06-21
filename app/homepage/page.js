@@ -1,13 +1,15 @@
 import HomePage from '@/app/modules/HomePage/HomePage'
 import React from 'react'
 import HomeProduct from '../modules/HomePage/HomeProduct'
+import CardItem from '../components/Carditem'
 
 const page = () => {
     return (
-        <div className='overflow-hidden'>
+        <div>
             <HomePage />
+            <CardItem />
 
-            <div className=' mt-96 padding-x padding-y max-w mb-16'>
+            <div className=' mt-80 padding-x padding-y max-w mb-16'>
                 <HomeProduct />
             </div>
 
