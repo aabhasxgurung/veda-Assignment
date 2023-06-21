@@ -4,7 +4,7 @@ import './footer.css'
 const Footer = () => {
     return (
         <div
-            className="flex justify-between text-white p-10 mt-96"
+            className="flex justify-between text-white p-10 mt-60"
             style={{
                 backgroundImage: `url('/images/Rectangle 82.png')`,
                 backgroundSize: 'cover',

@@ -3,7 +3,7 @@ import ProductDetails from '../modules/productDetails/ProductDetails'
 
 const page = () => {
     return (
-        <div>
+        <div >
             <ProductDetails />
         </div>
     )
