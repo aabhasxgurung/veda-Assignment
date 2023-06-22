@@ -1,12 +1,36 @@
 "use client"
-import React from 'react'
-
-import DropdownButton from '@/app/components/DropdownButton'
-
+import React, { useState, useEffect } from 'react';
 import ProductAll from './ProductAll'
+import axios from 'axios';
 
 
-const Productcomp = () => {
+const Productcomp = ({ selectedCategory, onCategoryChange }) => {
+    const [categories, setCategories] = useState([]);
+    const [filterCategories, setFilterCategories] = useState([]);
+
+    useEffect(() => {
+        fetchCategories();
+    }, []);
+
+    const fetchCategories = async () => {
+        try {
+            const response = await axios.get('https://dummyjson.com/products/categories');
+            setCategories(response.data);
+        } catch (error) {
+            console.error('Error fetching categories:', error);
+        }
+    };
+
+    const handleSelectChange = (event) => {
+        const selectedValue = event.target.value;
+
+        setFilterCategories(selectedValue);
+    };
+
+
+
+
+
     return (
         <div className='relative'>
             <img
@@ -19,9 +43,38 @@ const Productcomp = () => {
             </div>
             <div className='flex p-10 justify-between items-center mt-20 mb-36'>
                 <h1 className='text-[32px] font-semibold text-white'>{'>>'} All Products</h1>
-                <DropdownButton />
+                {/* <DropdownButton /> */}
+                <div>
+                    <div
+                        className="dropdown-container"
+                        style={{
+                            maxHeight: '100px', // Adjust the max height as needed
+                            overflowY: 'auto',
+                        }}
+                    >
+                        <select
+                            value={selectedCategory}
+                            onChange={handleSelectChange}
+                            className="bg-white py-2 px-4 rounded-full cursor-pointer w-[316px] h-[88px] text-[32px] items-center font-semibold appearance-none"
+                            style={{
+                                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 8l4 4 4-4H6z' clip-rule='evenodd' /%3E%3C/svg%3E")`,
+                                backgroundSize: '24px',
+                                backgroundPosition: 'right 10px center',
+                                backgroundRepeat: 'no-repeat',
+                                paddingRight: '40px',
+                            }}
+                        >
+                            <option value="">All Products</option>
+                            {categories.map((category) => (
+                                <option key={category} value={category}>
+                                    {category}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                </div>
             </div>
-            <ProductAll />
+            <ProductAll selectedCategory={selectedCategory} filterCategories={filterCategories} />
 
         </div>
     )
