@@ -32,8 +32,8 @@ const ProductDetails = ({ productId }) => {
             <div className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 <h1 className="font-routhem text-6xl text-[#F903AA] shadow-md">Product Details</h1>
             </div>
-            <div className="flex items-center justify-center">
-                <h2 className="absolute left-1/2 font-normal text-5xl text-white mt-[98px] transform -translate-x-1/2">{product.title}</h2>
+            <div className="flex items-center justify-center mt-[98px]">
+                <h2 className="absolute left-1/2 font-normal text-5xl text-white  transform -translate-x-1/2">{product.title}</h2>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 mt-[300px] w-[1138px] h-[436px] ml-[391px]">
                 <div className="flex">
@@ -51,7 +51,7 @@ const ProductDetails = ({ productId }) => {
                         </div>
                         <p className="text-gray-600 mb-4 text-[16px] leading-[24px]">{product.description}</p>
                         <p className="text-[25px] mb-[10px]">Price: Rs {product.price}</p>
-                        <p className="text-[25px]">Discount: {product.discount}%</p>
+                        <p className="text-[25px]">Discount: {product.discountPercentage}%</p>
                     </div>
                 </div>
             </div>

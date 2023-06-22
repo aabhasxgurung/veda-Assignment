@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
-import HomeProduct from '../HomePage/HomeProduct'
+
 import DropdownButton from '@/app/components/DropdownButton'
-import ProductCard from '@/app/components/ProductCard'
+
 import ProductAll from './ProductAll'
 
 

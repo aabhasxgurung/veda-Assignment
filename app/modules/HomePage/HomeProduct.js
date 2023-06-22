@@ -43,11 +43,16 @@ const HomeProduct = () => {
         },
     ];
 
+    const productsPerRow = 3;
+    const maxRows = 2;
+
+    const limitedProducts = products.slice(0, productsPerRow * maxRows);
+
     return (
         <div className="flex flex-col items-center mt-8">
             <h1 className="text-[60px] font-routhem text-[#F903AA] font-bold mb-28">Products</h1>
             <div className="grid grid-cols-3 gap-20">
-                {products.map((product) => (
+                {limitedProducts.map((product) => (
                     <ProductCard
                         key={product.id}
                         name={product.name}

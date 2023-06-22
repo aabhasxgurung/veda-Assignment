@@ -60,7 +60,7 @@
   border-image-slice: 1;
 }
 
-.gradient-text {
+#rubi .gradient-text {
   background-image: linear-gradient(
     90deg,
     #a8620a 2%,
