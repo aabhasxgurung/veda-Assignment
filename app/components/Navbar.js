@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div className='flex justify-between items-center h-full'>
             <div className='w-full h-[148px] flex bg-[#380D41] justify-between'>
-                <Image src="/images/LOGO.png" width={139} height={64} className='lg:ml-[375px] mt-16' />
+                <Image src="/images/LOGO.png" width={139} height={64} className='lg:ml-[375px] mt-16 mb-10' />
 
                 <div className='hidden w-full md:block md:w-auto'>
                     <ul className='ont-medium flex flex-col p-4 md:p-2 mt-16 rounded-lg md:flex-row md:space-x-8'>

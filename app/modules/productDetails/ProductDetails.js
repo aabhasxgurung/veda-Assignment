@@ -5,6 +5,7 @@ import { FaStar } from 'react-icons/fa';
 import DetailCard from '@/app/components/DetailCard';
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
 import './prodDetail.css';
+import Image from 'next/image';
 
 const ProductDetails = ({ productId }) => {
     const [product, setProduct] = useState(null);
@@ -28,7 +29,7 @@ const ProductDetails = ({ productId }) => {
 
     return (
         <div className="relative">
-            <img src="/images/details.png" alt="" />
+            <Image src="/images/details.png" width={1920} height={3144} />
             <div className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 <h1 className="font-routhem text-6xl text-[#F903AA] shadow-md">Product Details</h1>
             </div>
