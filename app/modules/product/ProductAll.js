@@ -5,6 +5,7 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import Link from 'next/link';
 import './product.css';
+import Image from 'next/image';
 
 const ProductAll = ({ selectedCategory, filterCategories }) => {
 
@@ -22,7 +23,7 @@ const ProductAll = ({ selectedCategory, filterCategories }) => {
 
     useEffect(() => {
         fetchProducts();
-    }, [selectedCategory]);
+    }, [selectedCategory,]);
 
     const truncateText = (text, maxLength) => {
         if (text.length <= maxLength) {
@@ -65,11 +66,8 @@ const ProductAll = ({ selectedCategory, filterCategories }) => {
                             </div>
                             <div className="text-center mt-10" id="product">
                                 <div className="flex justify-center items-center">
-                                    <img
-                                        src={product.thumbnail}
-                                        alt=""
-                                        className="w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105 hover:overflow-hidden"
-                                    />
+                                    <Image src={product.thumbnail} width={311} height={189} alt='' className="w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105 hover:overflow-hidden" />
+
                                 </div>
                                 <h2 className="text-[36px] w-[312px] h-[55px] font-regular mt-10">
                                     {truncateText(product.title, 20)}

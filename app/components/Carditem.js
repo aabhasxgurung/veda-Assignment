@@ -7,7 +7,7 @@ const CardItem = () => {
         <div id='card' className='w-full p-20 bg-[#380D41] '>
 
 
-            <Image src="/images/vector.png" width={46.97} height={46.97} />
+            <Image src="/images/vector.png" alt='' width={46.97} height={46.97} />
 
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
 
@@ -60,7 +60,7 @@ const CardItem = () => {
 
                 </div>
             </div>
-            <Image src="/images/Vector (1).png" width={46.97} height={46.97} className='absolute right-0 mr-[117px]' />
+            <Image src="/images/Vector (1).png" alt='' width={46.97} height={46.97} className='absolute right-0 mr-[117px]' />
 
 
         </div>

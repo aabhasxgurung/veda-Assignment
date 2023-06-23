@@ -26,7 +26,7 @@ const Footer = () => {
         >
             <div className="flex items-center">
                 <div className="flex flex-col">
-                    <Image src="/images/LOGO.png" width={139} height={64} className='leading-[63.98px] ml-[35.16px]' />
+                    <Image src="/images/LOGO.png" alt='' width={139} height={64} className='leading-[63.98px] ml-[35.16px]' />
 
                     <p className="font-regular text-lg ml-4 w-[412.8px] h-[135px] mt-[35.16px]">
                         LOGO is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -71,7 +71,7 @@ const Footer = () => {
             </div>
 
             <a href="#" onClick={scrollToTop} className="cursor-pointer">
-                <Image src="/images/Group 202.png" width={108} height={184} className='right-10' />
+                <Image src="/images/Group 202.png" alt='' width={108} height={184} className='right-10' />
 
             </a>
 

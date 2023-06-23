@@ -71,12 +71,12 @@ const HomeProduct = () => {
                             </div>
                             <div className="text-center mt-10" id="product">
                                 <div className="flex justify-center items-center">
-                                    {/* <Image src={product.thumbnail} width={311} height={189} /> */}
-                                    <img
+                                    <Image src={product.thumbnail} alt='' width={311} height={189} className='w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105' />
+                                    {/* <img
                                         src={product.thumbnail}
                                         alt=""
                                         className="w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105"
-                                    />
+                                    /> */}
                                 </div>
                                 <h2 className="text-[34px] w-[312px] h-[55px] font-regular mt-10 text-black">
                                     {truncateText(product.title, 15)}

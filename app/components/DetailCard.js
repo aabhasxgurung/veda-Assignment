@@ -27,16 +27,16 @@ const DetailCard = ({ productId }) => {
     return (
         <div className="flex justify-center items-center gap-14">
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <Image src={product.thumbnail} width={245} height={288} />
+                <Image src={product.thumbnail} alt='' width={245} height={288} />
             </div>
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <Image src={product.thumbnail} width={245} height={288} />
+                <Image src={product.thumbnail} alt='' width={245} height={288} />
             </div>
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <Image src={product.thumbnail} width={245} height={288} />
+                <Image src={product.thumbnail} alt='' width={245} height={288} />
             </div>
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <Image src={product.thumbnail} width={245} height={288} />
+                <Image src={product.thumbnail} alt='' width={245} height={288} />
             </div>
         </div>
 

@@ -29,7 +29,7 @@ const ProductDetails = ({ productId }) => {
 
     return (
         <div className="relative">
-            <Image src="/images/details.png" width={1920} height={3144} />
+            <Image src="/images/details.png" alt='' width={1920} height={3144} />
             <div className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 <h1 className="font-routhem text-6xl text-[#F903AA] shadow-md">Product Details</h1>
             </div>
@@ -39,7 +39,8 @@ const ProductDetails = ({ productId }) => {
             <div id='detail' className="bg-white rounded-lg shadow-md p-6 mt-[200px] w-[1138px] h-[436px] ml-[391px] gradient-border">
                 <div className="flex">
                     <div>
-                        <img src={product.thumbnail} alt={product.title} className="w-[377px] h-[375px]" />
+                        <Image src={product.thumbnail} alt={product.title} width={377} height={375} className="w-[377px] h-[375px]" />
+
                     </div>
                     <div className="w-2/3 pl-6">
                         <h2 className="text-2xl font-bold text-gray-800 mb-4 mt-[54px]">{product.title}</h2>

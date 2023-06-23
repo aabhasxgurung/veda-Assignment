@@ -9,7 +9,7 @@ const Card = ({ pname, imageSrc, description, price, size, width, height }) => {
     return (
 
         <div id='card' className="w-[300px] h-[391px] bg-white  p-6 shadow-md border-4 gradient-border ">
-            <Image src={imageSrc} width={width} height={height} className={size} />
+            <Image src={imageSrc} alt='' width={width} height={height} className={size} />
 
 
             {/* <img
