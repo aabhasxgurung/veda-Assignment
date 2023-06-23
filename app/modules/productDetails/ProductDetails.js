@@ -32,10 +32,10 @@ const ProductDetails = ({ productId }) => {
             <div className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 <h1 className="font-routhem text-6xl text-[#F903AA] shadow-md">Product Details</h1>
             </div>
-            <div className="flex items-center justify-center mt-[98px]">
+            <div className="flex items-center justify-center mt-[200px]">
                 <h2 className="absolute left-1/2 font-normal text-5xl text-white  transform -translate-x-1/2">{product.title}</h2>
             </div>
-            <div className="bg-white rounded-lg shadow-md p-6 mt-[300px] w-[1138px] h-[436px] ml-[391px]">
+            <div id='detail' className="bg-white rounded-lg shadow-md p-6 mt-[200px] w-[1138px] h-[436px] ml-[391px] gradient-border">
                 <div className="flex">
                     <div>
                         <img src={product.thumbnail} alt={product.title} className="w-[377px] h-[375px]" />
@@ -56,7 +56,7 @@ const ProductDetails = ({ productId }) => {
                 </div>
             </div>
             <div className="mt-[119px] ml-[119px]">
-                <DetailCard />
+                <DetailCard productId={productId} />
             </div>
             <div className="flex mt-[118px] mb-60 ml-[49%] gap-[39px] font-semibol text-white">
                 <BsArrowLeftCircle size={47} />

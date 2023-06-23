@@ -7,11 +7,19 @@ import Link from 'next/link';
 import './product.css';
 
 const ProductAll = ({ selectedCategory, filterCategories }) => {
-    console.log(filterCategories)
+
     const [products, setProducts] = useState([]);
-    const [filterproducts, setFilterProducts] = useState([]);
-    const filterData = products.filter(product => { return (product.category.includes(filterCategories)) })
+
+    const filterData = products.filter(product => {
+        return (
+            product.category.includes(filterCategories)
+        )
+    })
+
+
     console.log(filterData)
+
+
     useEffect(() => {
         fetchProducts();
     }, [selectedCategory]);
@@ -40,7 +48,7 @@ const ProductAll = ({ selectedCategory, filterCategories }) => {
 
     return (
 
-        <div className="flex flex-col items-center mt-8">
+        <div id='rubi' className="flex flex-col items-center mt-8">
             <div className="grid grid-cols-3 gap-20">
                 {filterData.length > 0 ? (
 
@@ -60,7 +68,7 @@ const ProductAll = ({ selectedCategory, filterCategories }) => {
                                     <img
                                         src={product.thumbnail}
                                         alt=""
-                                        className="w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105"
+                                        className="w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105 hover:overflow-hidden"
                                     />
                                 </div>
                                 <h2 className="text-[36px] w-[312px] h-[55px] font-regular mt-10">

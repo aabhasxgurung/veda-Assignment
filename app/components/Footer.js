@@ -25,9 +25,7 @@ const Footer = () => {
         >
             <div className="flex items-center">
                 <div className="flex flex-col">
-                    <img
-                        src="images/LOGO.png"
-                        alt="Logo"
+                    <img src="/images/LOGO.png" alt=""
                         className="w-[139px] h-[64px] leading-[63.98px] ml-[35.16px]"
                     />
                     <p className="font-regular text-lg ml-4 w-[412.8px] h-[135px] mt-[35.16px]">
