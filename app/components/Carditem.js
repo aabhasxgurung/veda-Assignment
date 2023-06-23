@@ -8,7 +8,7 @@ const CardItem = () => {
         <div id='card' className='w-full p-20 bg-[#380D41] '>
 
 
-            <Image src="/images/vector.png" alt='' width={46.97} height={46.97} />
+            <Image loading='lazy' src="/images/vector.png" alt='' width={46.97} height={46.97} />
 
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
 
