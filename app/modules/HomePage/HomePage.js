@@ -18,7 +18,7 @@ const HomePage = () => {
             <div className='w-full'>
                 {/* <Image src="/images/Homebg.png" alt='' width={1920} height={3774} /> */}
                 <picture>
-                    <img src='images/Homebg.png' alt='Logo' className='w-full h-full mt-0 object-cover' />
+                    <img src='/assets/image/Homebg.png' alt='Logo' className='w-full h-full mt-0 object-cover' />
                 </picture>
             </div>
 
