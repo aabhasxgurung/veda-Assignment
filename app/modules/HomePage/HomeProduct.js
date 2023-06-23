@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import './home.css';
+import Image from 'next/image';
 
 const HomeProduct = () => {
     const [products, setProducts] = useState([]);
@@ -70,6 +71,7 @@ const HomeProduct = () => {
                             </div>
                             <div className="text-center mt-10" id="product">
                                 <div className="flex justify-center items-center">
+                                    {/* <Image src={product.thumbnail} width={311} height={189} /> */}
                                     <img
                                         src={product.thumbnail}
                                         alt=""

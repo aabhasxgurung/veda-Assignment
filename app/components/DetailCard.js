@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import "./detail.css"
+import Image from 'next/image';
 
 const DetailCard = ({ productId }) => {
     const [product, setProduct] = useState(null);
@@ -24,20 +25,21 @@ const DetailCard = ({ productId }) => {
     }
 
     return (
-        <div className="flex justify-center gap-14">
+        <div className="flex justify-center items-center gap-14">
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <img src={product.thumbnail} alt="" className="w-full h-full" />
+                <Image src={product.thumbnail} width={245} height={288} />
             </div>
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <img src={product.thumbnail} alt="" className="w-full h-full" />
+                <Image src={product.thumbnail} width={245} height={288} />
             </div>
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <img src={product.thumbnail} alt="" className="w-full h-full" />
+                <Image src={product.thumbnail} width={245} height={288} />
             </div>
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <img src={product.thumbnail} alt="" className="w-full h-full" />
+                <Image src={product.thumbnail} width={245} height={288} />
             </div>
         </div>
+
     );
 };
 

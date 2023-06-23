@@ -3,6 +3,7 @@ import React from 'react';
 import './footer.css';
 import { BsFacebook, BsInstagram } from 'react-icons/bs';
 import { AiFillTwitterCircle } from 'react-icons/ai';
+import Image from 'next/image';
 
 const scrollToTop = () => {
     window.scrollTo({
@@ -25,9 +26,8 @@ const Footer = () => {
         >
             <div className="flex items-center">
                 <div className="flex flex-col">
-                    <img src="/images/LOGO.png" alt=""
-                        className="w-[139px] h-[64px] leading-[63.98px] ml-[35.16px]"
-                    />
+                    <Image src="/images/LOGO.png" width={139} height={64} className='leading-[63.98px] ml-[35.16px]' />
+
                     <p className="font-regular text-lg ml-4 w-[412.8px] h-[135px] mt-[35.16px]">
                         LOGO is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                         standard dummy text ever since the 1500s, when
@@ -71,7 +71,8 @@ const Footer = () => {
             </div>
 
             <a href="#" onClick={scrollToTop} className="cursor-pointer">
-                <img src="/images/Group 202.png" alt="Scroll to top" className="w-[108px] h-[184px] right-10" />
+                <Image src="/images/Group 202.png" width={108} height={184} className='right-10' />
+
             </a>
 
             <div className="text-center absolute mt-8 bottom-0 left-0 right-0">
