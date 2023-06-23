@@ -29,7 +29,7 @@ const Footer = () => {
                     <Image src="/images/LOGO.png" alt='' width={139} height={64} className='leading-[63.98px] ml-[35.16px]' />
 
                     <p className="font-regular text-lg ml-4 w-[412.8px] h-[135px] mt-[35.16px]">
-                        LOGO is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        LOGO is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
                         standard dummy text ever since the 1500s, when
                     </p>
                 </div>
