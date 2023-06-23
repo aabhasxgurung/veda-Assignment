@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+
 import './card.css'
 
 
@@ -14,7 +14,7 @@ const Card = ({ pname, imageSrc, description, price, size }) => {
                 alt="Product Image"
                 className={size}
 
-            />
+            ></img>
 
             <p className=" text-black font-bold">{pname}</p>
             <p className="text-[#0A0A0A] mt-[8.6px]">{description}</p>
