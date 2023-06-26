@@ -9,7 +9,7 @@ import './card.css'
 const Card = ({ pname, imageSrc, description, price, size, width, height }) => {
     return (
 
-        <div id='card' className="w-[300px] h-[391px] bg-white  p-6 shadow-md border-4 gradient-border ">
+        <div id='card' className="w-[200px] sm:w-[300px] h-[255px] sm:h-[391px] bg-white  p-6 shadow-md border-4 gradient-border ">
             <Image src={imageSrc} alt='' width={width} height={height} className={size} />
 
 

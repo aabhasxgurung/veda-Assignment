@@ -26,7 +26,10 @@ const DetailCard = ({ productId }) => {
 
     return (
         <div className="flex justify-center items-center gap-14">
-            <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
+            <div className="sm:w-[300px] sm:h-[391px] w-[242px] h-[316px] rounded-lg bg-white border-gold">
+                <Image src={product.thumbnail} alt='' width={245} height={288} />
+            </div>
+            {/* <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
                 <Image src={product.thumbnail} alt='' width={245} height={288} />
             </div>
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
@@ -34,10 +37,7 @@ const DetailCard = ({ productId }) => {
             </div>
             <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
                 <Image src={product.thumbnail} alt='' width={245} height={288} />
-            </div>
-            <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <Image src={product.thumbnail} alt='' width={245} height={288} />
-            </div>
+            </div> */}
         </div>
 
     );

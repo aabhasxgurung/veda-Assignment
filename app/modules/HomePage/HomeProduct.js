@@ -42,15 +42,15 @@ const HomeProduct = () => {
 
     return (
         <div id='rubi' className="flex flex-col items-center mt-6">
-            <h1 className="text-[60px] font-routhem text-[#F903AA] font-bold mt-[50px] mb-14 uppercase trracking-widest">Products</h1>
-            <div className="grid grid-cols-3 gap-20">
+            <h1 className="sm:text-[60px] text-[45px] font-routhem text-[#F903AA] font-bold mt-[50px] mb-14 uppercase trracking-widest">Products</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20">
                 {products.length > 0 ? (
                     products.map((product) => (
                         <div
                             key={product.id}
-                            className="bg-white rounded-[36px] shadow-md p-4 w-[397px] h-[542px] mb-32"
+                            className="bg-white rounded-[36px] shadow-md p-4 sm:w-[397px] w-[325px] h-[445px] sm:h-[542px] sm:mb-32"
                         >
-                            <div className="absolute font-medium text-[21px] mt-4 ml-4 gradient-text">
+                            <div className="absolute font-medium text-[17px] sm:text-[21px] mt-4 ml-4 gradient-text">
                                 <p>{product.brand}</p>
                             </div>
 
@@ -71,20 +71,20 @@ const HomeProduct = () => {
                             </div>
                             <div className="text-center mt-10" id="product">
                                 <div className="flex justify-center items-center">
-                                    <Image src={product.thumbnail} alt='' width={311} height={189} className='w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105' />
+                                    <Image src={product.thumbnail} alt='' width={311} height={189} className='sm:w-[311px] w-[254px] sm:h-[189px] h-[154px] transition-all duration-300 ease-in-out transform hover:scale-105' />
                                     {/* <img
                                         src={product.thumbnail}
                                         alt=""
                                         className="w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105"
                                     /> */}
                                 </div>
-                                <h2 className="text-[34px] w-[312px] h-[55px] font-regular mt-10 text-black">
+                                <h2 className="sm:text-[34px] text-[29px] w-[312px] h-[55px] font-regular mt-2 sm:mt-10 text-black">
                                     {truncateText(product.title, 15)}
                                 </h2>
 
                                 <div className="button-container">
                                     <Link href={`/productDet/${product.id}`}>
-                                        <li className="button text-[25px] font-semibold h-[86px] rounded-full py-2 px-10 mt-12 transition-all duration-300 ease-in-out flex justify-between items-center border-product">
+                                        <li className="button text-[20px] sm:text-[25px] font-semibold h-[70px] sm:h-[86px] rounded-full py-2 px-10 sm:mt-12 transition-all duration-300 ease-in-out flex justify-between items-center border-product">
                                             <span>View</span>
                                             <BsArrowRightCircle size={47} />
                                         </li>

@@ -39,8 +39,8 @@ const Productcomp = ({ selectedCategory, onCategoryChange }) => {
             <div className='absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>
                 <h1 className="font-routhem text-[60px] text-[#F903AA] shadow-md">PRODUCTS</h1>
             </div>
-            <div className='flex p-10 justify-between items-center mt-20 mb-36'>
-                <h1 className='text-[32px] font-semibold text-white'>{'>>'} All Products</h1>
+            <div className='flex p-10 sm:justify-between justify-center flex-col sm:flex-row items-center mt-20 mb-36'>
+                <h1 className='text-[32px] font-semibold text-white mb-12'>{'>>'} All Products</h1>
                 {/* <DropdownButton /> */}
                 <div>
                     <div
@@ -62,7 +62,7 @@ const Productcomp = ({ selectedCategory, onCategoryChange }) => {
                                 paddingRight: '40px',
                             }}
                         >
-                            <option value="">All Products</option>
+                            <option value="" className='item-center justify-center text-center'>All Products</option>
                             {categories.map((category) => (
                                 <option key={category} value={category}>
                                     {category}
