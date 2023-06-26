@@ -15,7 +15,7 @@ const scrollToTop = () => {
 const Footer = () => {
     return (
         <div
-            className="flex justify-between text-white p-10 mt-60 relative"
+            className="flex flex-col sm:flex-row sm:justify-between text-white p-10 mt-60 relative  "
             style={{
                 backgroundImage: `url('/images/Rectangle 82.png')`,
                 backgroundSize: 'cover',
@@ -24,6 +24,7 @@ const Footer = () => {
                 height: '600px',
             }}
         >
+
             <div className="flex items-center">
                 <div className="flex flex-col">
                     <Image src="/images/LOGO.png" alt='' width={139} height={64} className='leading-[63.98px] ml-[35.16px]' />
