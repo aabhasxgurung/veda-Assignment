@@ -41,3 +41,41 @@ html {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.background {
+  background-image: url("/images/Rectangle 82.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 680px;
+  margin-bottom: 90px;
+}
+
+@media only screen and (max-width: 768px) {
+  .background {
+    height: 900px;
+    margin-bottom: 0;
+    opacity: 95%;
+    background-image: url("/images/Rectangle 126.png");
+  }
+  .rocket {
+    margin-bottom: 500px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .background {
+    height: 680px;
+    margin-bottom: 10px;
+    opacity: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .background {
+    height: 900px;
+    margin-bottom: 0;
+    opacity: 95%;
+    background-image: url("/images/Rectangle 126.png");
+  }
+}

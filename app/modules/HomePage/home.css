@@ -38,20 +38,61 @@
     #fe3873 100%
   );
 }
-#main .logo-letter {
+.logo-letter {
   display: inline-block;
   opacity: 0;
-  animation: letterAnimation 1s ease-in forwards;
+  animation: typewriterAnimation 2s ease-in-out forwards;
 }
 
-@keyframes letterAnimation {
+.logo-letter.visible {
+  opacity: 1;
+  animation: fadeInOutAnimation 2s ease-in-out forwards;
+}
+
+@keyframes typewriterAnimation {
   0% {
     opacity: 0;
-    transform: translateY(100%);
+  }
+  20% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.text-wrapper {
+  -webkit-text-stroke: 0.5px #e2e53c;
+  color: #f903aa;
+  font-size: 60px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 129px;
+  text-align: center;
+  text-shadow: 8px 22px 4px #00000040;
+  top: 0;
+}
+
+@media only screen and (min-width: 300px) {
+  .text-wrapper {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .text-wrapper {
+    font-size: 65px;
   }
 }
 

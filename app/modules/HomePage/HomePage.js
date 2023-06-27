@@ -7,11 +7,19 @@ import Link from 'next/link';
 
 
 const HomePage = () => {
-    const [letters, setLetters] = useState([]);
+    const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        setLetters(Array.from('Logo Electronics'));
+        const interval = setInterval(() => {
+            setVisible((prevVisible) => !prevVisible);
+        }, 3100);
+
+        return () => {
+            clearInterval(interval);
+        };
     }, []);
+
+    const logoText = "Logo Electronics";
 
     return (
         <div className='w-screen relative flex justify-center items-center mt-1.5 overflow-hidden bg-[#380D41]'>
@@ -26,16 +34,15 @@ const HomePage = () => {
             {/* heading inside image */}
             <div id='main' className='absolute top-[160px] transform -translate-y-1/2 text-center'>
 
-                <h1 className='text-[35px] sm:text-[60px] justify-center inline-flex items-center font-semibold text-[#F903AA] w-[342px] h-[73px] sm:w-[602px] sm:h-[129px] font-routhem leading-[129px] mt-[160px] tracking-widest'>
+                <h1 className='text-[35px] sm:text-[60px] justify-center inline-flex items-center font-semibold text-[#F903AA] w-[342px] h-[73px] sm:w-[602px] sm:h-[129px] font-routhem leading-[129px] mt-[160px] tracking-widest text-wrapper'>
 
                     {/* heading animation */}
-                    {letters.map((letter, index) => (
+                    {logoText.split('').map((letter, index) => (
                         <span
                             key={index}
-                            className='logo-letter'
+                            className={`logo-letter ${visible ? 'visible' : ''}`}
                             style={{
-                                animation: `letterAnimation 0.8s ease-in forwards`,
-                                animationDelay: `${index * 0.1}s`,
+                                animationDelay: `${index * 0.2}s`,
                             }}
                         >
                             {letter}

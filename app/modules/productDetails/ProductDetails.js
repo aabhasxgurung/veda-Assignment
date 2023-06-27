@@ -26,6 +26,7 @@ const ProductDetails = ({ productId }) => {
     if (!product) {
         return <div>Loading...</div>;
     }
+    const filledStars = Math.round(product.rating);
 
     return (
         <div className="relative">
@@ -45,11 +46,9 @@ const ProductDetails = ({ productId }) => {
                     <div className="w-2/3 pl-6">
                         <h2 className="text-2xl font-bold text-gray-800 mb-4 mt-[54px]">{product.title}</h2>
                         <div className="flex items-center mb-4">
-                            <span className="text-yellow-500 flex text-xl font-bold mr-2">
-                                {[...Array(5)].map((_, index) => (
-                                    <FaStar key={index} />
-                                ))}
-                            </span>
+                            {[...Array(5)].map((_, index) => (
+                                <FaStar key={index} color={index < filledStars ? '#ffc107' : '#c4c4c4'} />
+                            ))}
                         </div>
                         <p className="text-gray-600 mb-4 text-[16px] leading-[24px]">{product.description}</p>
                         <p className="text-[25px] mb-[10px]">Price: Rs {product.price}</p>
@@ -60,7 +59,7 @@ const ProductDetails = ({ productId }) => {
             <div className="mt-[119px] sm:ml-[119px]">
                 <DetailCard productId={productId} />
             </div>
-            <div className="flex mt-[118px] mb-60 ml-[49%] gap-[39px] font-semibol text-white">
+            <div className="flex mt-[118px] mb-60 ml-[35%] sm:ml-[49%] gap-[39px] font-semibol text-white">
                 <BsArrowLeftCircle size={47} />
                 <BsArrowRightCircle size={47} />
             </div>

@@ -2,6 +2,7 @@
 import React from 'react';
 import Card from './Card';
 import Image from 'next/image';
+import "./card.css"
 
 const CardItem = () => {
     return (
@@ -10,7 +11,7 @@ const CardItem = () => {
 
             {/* <Image src="/assets/image/Vector.png" alt='' width={46.97} height={46.97} /> */}
 
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 sm:translate-y-1/2 -translate-y-1/2 overflow-hidden">
+            <div className="absolute bottom-0 overflow-hidden position">
 
                 <div className="flex space-x-5 mt-[100px] sm:mt-[200px]  sm:space-x-[112px]">
 
@@ -22,7 +23,8 @@ const CardItem = () => {
                         width={263}
                         height={145}
                         size="mb-[8.6px] mt-[31px] rounded-lg"
-                        animationDelay="0s" // Add animation delay for the first card
+                        animationDelay="0s"
+                    // Add animation delay for the first card
                     />
 
                     <Card

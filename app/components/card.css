@@ -13,3 +13,55 @@
     )
     1;
 }
+
+@media only screen and (max-width: 640px) {
+  .position {
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .position {
+    transform: translate(-50%, 60%);
+    left: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .position {
+    transform: translate(-50%, 60%);
+    left: 50%;
+  }
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(200%);
+  }
+  50% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+#card .gradient-border:nth-child(1),
+#card .gradient-border:nth-child(2),
+#card .gradient-border:nth-child(3),
+#card .gradient-border:nth-child(4) {
+  animation: slideAnimation 2s infinite;
+}
+
+@media (max-width: 1024px) {
+  #card .gradient-border {
+    animation: none;
+    display: none;
+  }
+
+  #card .gradient-border:nth-child(-n + 2) {
+    animation: slideAnimation 2s infinite;
+    display: block;
+  }
+}

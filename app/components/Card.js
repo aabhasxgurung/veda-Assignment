@@ -6,19 +6,18 @@ import './card.css'
 
 
 
-const Card = ({ pname, imageSrc, description, price, size, width, height }) => {
+const Card = ({ pname, imageSrc, description, price, size, }) => {
     return (
 
         <div id='card' className="w-[200px] sm:w-[300px] h-[255px] sm:h-[391px] bg-white  p-6 shadow-md border-4 gradient-border ">
-            <Image src={imageSrc} alt='' width={width} height={height} className={size} />
 
 
-            {/* <img
+            <img
                 src={imageSrc}
                 alt="Product Image"
                 className={size}
 
-            ></img> */}
+            ></img>
 
             <p className=" text-black font-bold">{pname}</p>
             <p className="text-[#0A0A0A] mt-[8.6px]">{description}</p>

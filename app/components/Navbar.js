@@ -13,10 +13,10 @@ const Navbar = () => {
 
     return (
         <div className='flex justify-between items-center h-full relative'>
-            <div className='w-full h-[148px] flex bg-[#380D41] absolute sm:relative'>
-                <div className='md:hidden'>
+            <div className='w-screen h-[148px] flex bg-[#380D41] absolute sm:relative'>
+                <div className='lg:hidden'>
                     <button
-                        className='absolute p-2  top-[100px] right-4 rounded-md z-50 bg-gray-200 text-gray-800'
+                        className='absolute p-2 top-[100px] right-4 rounded-md z-50 bg-gray-200 text-gray-800'
                         onClick={toggleMobileMenu}
                     >
                         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -34,12 +34,12 @@ const Navbar = () => {
                                 />
                                 <ul className='flex flex-col p-4 space-y-4 mt-[82px]'>
                                     <li className='bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
-                                        <Link href='/homepage' className='text-[32px] font-medium'>
+                                        <Link href='/homepage' onClick={toggleMobileMenu} className='text-[32px] font-medium'>
                                             Home
                                         </Link>
                                     </li>
                                     <li className='bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
-                                        <Link href='/product' className='text-[32px] font-medium'>
+                                        <Link href='/product' onClick={toggleMobileMenu} className='text-[32px] font-medium'>
                                             Products
                                         </Link>
                                     </li>
@@ -56,23 +56,23 @@ const Navbar = () => {
                     )}
                 </div>
                 <Link href="/">
-                    <div className='hidden  md:block'>
+                    <div className='hidden lg:block'>
                         <Image
                             src='/images/LOGO.png'
                             width={139}
                             height={64}
                             alt=''
-                            className='ml-[375px] mt-16 mb-10'
+                            className='ml-[175px] md:ml-[275px] lg:-[375px] mt-16 mb-10 transition-transform duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'
                         />
                     </div>
                 </Link>
 
-                <div className='hidden md:block md:w-auto'>
-                    <ul className='font-medium flex flex-col p-4 gap-4 md:p-2 mt-16 rounded-lg md:flex-row md:space-x-8'>
-                        <li className='absolute right-[34.31%] text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
+                <div className='hidden lg:block '>
+                    <ul className='font-medium flex  p-4 gap-4 md:p-2 mt-16 rounded-lg md:flex-row md:space-x-8'>
+                        <li className='absolute md:right-[34.31%] text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
                             <Link href="/homepage">Home</Link>
                         </li>
-                        <li className='absolute right-[26.44%] text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
+                        <li className='absolute md:right-[26.44%] text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
                             <Link href={"/product"}>Products</Link>
                         </li>
                     </ul>
