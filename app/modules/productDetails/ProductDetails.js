@@ -35,11 +35,11 @@ const ProductDetails = ({ productId }) => {
             <div className="absolute top-60 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                 <h1 className="font-routhem text-6xl  shadow-md wrap">Product Details</h1>
             </div>
-            <div className="flex items-center justify-center mt-[200px]">
-                <h2 className="absolute left-1/2 font-normal text-5xl text-white transform -translate-x-1/2 sm:-tra">{product.title}</h2>
+            <div className="flex items-center justify-center mt-[50px] md:mt-[100px]">
+                <h2 className="absolute left-1/2 font-normal text-5xl text-white transform -translate-x-1/2">{product.title}</h2>
             </div>
             <div id='detail' className="flex justify-center items-center ">
-                <div className="bg-white rounded-lg shadow-md p-6 flex justify-center sm:mt-[250px] md:left-1/2 mt-[300px] w-[390px] sm:w-[1138px] h-[794px] sm:h-[436px]  gradient-border">
+                <div className="bg-white rounded-lg shadow-md p-6 flex justify-start sm:mt-[250px] md:left-1/2 mt-[300px] w-[390px] sm:w-[1138px] h-[794px] sm:h-[436px]  gradient-border">
                     <div className="flex flex-col sm:flex-row">
                         <div>
                             <Image src={product.thumbnail} alt={product.title} width={377} height={375} className="sm:w-[377px] sm:h-[375px] w-[324px] h-[322px]" />

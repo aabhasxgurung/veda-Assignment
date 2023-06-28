@@ -70,7 +70,7 @@ const Footer = () => {
                 </div>
 
                 <a href="#" onClick={scrollToTop} >
-                    <Image src="/images/Group 202.png" alt='' width={100} height={150} className='right-0 absolute top-0 ' />
+                    <Image src="/images/Group 202.png" alt='' width={100} height={150} className='right-4 absolute top-0 w-[71.65px] h-[122px] md:w-[100px] md:h-[150px] ' />
                 </a>
             </div>
             <div className="text-center bottom-0 left-0 right-0 ">

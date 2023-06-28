@@ -40,7 +40,7 @@ const Productcomp = ({ selectedCategory, onCategoryChange }) => {
                 <h1 className="font-routhem text-[60px] text-[#F903AA] wrap shadow-md">PRODUCTS</h1>
             </div>
             <div className='flex p-10 sm:justify-between justify-center flex-col sm:flex-row items-center mt-20 mb-36'>
-                <h1 className='text-[32px] font-semibold text-white mb-12'>{'>>'} All Products</h1>
+                <h1 className='text-[32px] font-semibold text-white mb-12'>{selectedCategory ? `>> ${selectedCategory}` : '>> All Products'}</h1>
                 {/* <DropdownButton /> */}
                 <div>
                     <div

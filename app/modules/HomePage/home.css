@@ -112,52 +112,6 @@
   );
 }
 
-.button:hover {
-  background: #fff; /* Change background to white on hover */
-  color: linear-gradient(
-    90deg,
-    #920aa8 2%,
-    #e019cc 20%,
-    #ff81e3 48%,
-    #fc75d6 52%,
-    #df55f6 60%,
-    #e822ec 71%,
-    #e80f91 75%,
-    #ee19d8 81.25%,
-    #f323b7 87.5%,
-    #fe3873 100%
-  ); /* Apply gradient to text color */
-  border: 2px solid
-    linear-gradient(
-      90deg,
-      #920aa8 2%,
-      #e019cc 20%,
-      #ff81e3 48%,
-      #fc75d6 52%,
-      #df55f6 60%,
-      #e822ec 71%,
-      #e80f91 75%,
-      #ee19d8 81.25%,
-      #f323b7 87.5%,
-      #fe3873 100%
-    ); /* Apply gradient to border */
-}
-.goldtext .gradient-border {
-  border: 5px solid;
-  border-image: linear-gradient(
-    90deg,
-    #a8620a 2%,
-    #e09519 20%,
-    #ffe581 48%,
-    #fcdc75 52%,
-    #f6c755 60%,
-    #eca522 71%,
-    #e8980f 75%,
-    #feb838 100%
-  );
-  border-image-slice: 1;
-}
-
 #rubi .gradient-text {
   background-image: linear-gradient(
     90deg,

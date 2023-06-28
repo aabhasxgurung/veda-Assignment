@@ -12,11 +12,9 @@ export default function Home() {
     <div className='overflow-hidden'>
       <HomePage />
       <CardItem />
-
-
-      <HomeProduct />
-
-
+      <div className='mt-80 padding-x padding-y max-w mb-16'>
+        <HomeProduct />
+      </div>
     </div >
 
   )
