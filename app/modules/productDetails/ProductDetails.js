@@ -27,7 +27,6 @@ const ProductDetails = ({ productId }) => {
         return <div>Loading...</div>;
     }
     const filledStars = Math.round(product.rating);
-    const thumbnails = Array(4).fill(product.thumbnail);
 
     return (
         <div className="relative">
@@ -60,7 +59,7 @@ const ProductDetails = ({ productId }) => {
                 </div>
             </div>
             <div className="mt-[119px] sm:ml-[119px] flex justify-center items-center">
-                <DetailCard thumbnails={thumbnails} />
+                <DetailCard images={product.images} />
             </div>
             <div className="flex mt-[118px] mb-60 ml-[35%] sm:ml-[49%] gap-[39px] font-semibol text-white">
                 <BsArrowLeftCircle size={47} />
