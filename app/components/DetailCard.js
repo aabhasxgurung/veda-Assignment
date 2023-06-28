@@ -1,47 +1,16 @@
-"use client"
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import "./detail.css"
-import Image from 'next/image';
+import React from 'react';
+import './card.css'
 
-const DetailCard = ({ productId }) => {
-    const [product, setProduct] = useState(null);
-
-    useEffect(() => {
-        fetchProduct();
-    }, [productId]);
-
-    const fetchProduct = async () => {
-        try {
-            const response = await axios.get(`https://dummyjson.com/products/${productId}`);
-            setProduct(response.data);
-        } catch (error) {
-            console.error('Error fetching product:', error);
-        }
-    };
-
-    if (!product) {
-        return <div>Loading...</div>;
-    }
-
+const DetailCard = ({ thumbnails }) => {
     return (
-        <div className="flex justify-center items-center gap-14">
-            <div className="sm:w-[300px] sm:h-[391px] w-[242px] h-[316px] rounded-lg bg-white border-gold">
-                <Image src={product.thumbnail} alt='' width={245} height={288} />
-            </div>
-            {/* <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <Image src={product.thumbnail} alt='' width={245} height={288} />
-            </div>
-            <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <Image src={product.thumbnail} alt='' width={245} height={288} />
-            </div>
-            <div className="w-[300px] h-[391px] rounded-lg bg-white border-gold">
-                <Image src={product.thumbnail} alt='' width={245} height={288} />
-            </div> */}
+        <div id="detail-card" className="flex space-x-4 sm:mt-[200px] gap-[10px] sm:gap-[100px] left-1/2 transform -translate-x-1  overflow-hidden">
+            {thumbnails.map((thumbnail, index) => (
+                <div key={index} className="sm:w-[300px] w-[220px] sm:h-[391px] h-[300.55px] bg-white p-6 shadow-md border-4 gradient-border">
+                    <img src={thumbnail} alt="" className="w-full h-full object-cover object-center" />
+                </div>
+            ))}
         </div>
-
     );
 };
 
 export default DetailCard;
-

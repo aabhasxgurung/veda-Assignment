@@ -13,3 +13,14 @@
     )
     1;
 }
+.wrap {
+  -webkit-text-stroke: 0.5px #e2e53c;
+  color: #f903aa;
+  font-size: 60px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  text-align: center;
+  text-shadow: 8px 22px 4px #00000040;
+  top: 0;
+}

@@ -29,7 +29,7 @@ const Footer = () => {
                         />
 
                         <p className="font-regular text-lg ml-4 sm:w-[412.8px] w-[283px] h-[135px] mt-[35.16px] sm:text-center">
-                            LOGO is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys
+                            LOGO is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                             standard dummy text ever since the 1500s, when
                         </p>
                     </div>
@@ -68,11 +68,11 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <a href="#" onClick={scrollToTop} className='rocket'>
-                <Image src="/images/Group 202.png" alt='' width={108} height={184} className='sm:right-10 sm:w-[108px] sm:h-[184px] w-[71.65px] h-[122px]' />
-            </a>
 
+                <a href="#" onClick={scrollToTop} >
+                    <Image src="/images/Group 202.png" alt='' width={100} height={150} className='right-0 absolute top-0 ' />
+                </a>
+            </div>
             <div className="text-center bottom-0 left-0 right-0 ">
                 <p className="p-[39px] font-semibold text-[18px] text-white">COPYRIGHT 2021 lOGO ALL RIGHT RESERVED</p>
             </div>

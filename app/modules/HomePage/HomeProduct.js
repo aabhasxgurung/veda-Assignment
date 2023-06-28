@@ -42,7 +42,7 @@ const HomeProduct = () => {
 
     return (
         <div id='rubi' className="flex flex-col items-center mt-6">
-            <h1 className="sm:text-[60px] text-[45px] font-routhem text-[#F903AA] font-bold mt-[50px] mb-14 uppercase trracking-widest">Products</h1>
+            <h1 className="sm:text-[60px] text-[45px] font-routhem text-[#F903AA] font-bold sm:mt-[150px] mt-[20px] mb-14 uppercase text-wrapper trracking-widest">Products</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 md:gap-5">
                 {products.length > 0 ? (
                     products.map((product) => (
@@ -50,7 +50,7 @@ const HomeProduct = () => {
                             key={product.id}
                             className="bg-white rounded-[36px] shadow-md p-4 md:w-[397px] w-[325px] h-[445px] md:h-[542px] sm:mb-32"
                         >
-                            <div className="absolute font-medium text-[17px] md:text-[21px] mt-4 ml-4 gradient-text">
+                            <div className="absolute font-medium text-[17px] md:text-[21px] mt-4 ml-6 gradient-text">
                                 <p>{product.brand}</p>
                             </div>
 

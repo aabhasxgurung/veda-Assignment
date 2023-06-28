@@ -59,7 +59,7 @@ const ProductAll = ({ selectedCategory, filterCategories }) => {
                             key={product.id}
                             className="bg-white rounded-[36px] shadow-md sm:w-[397px] w-[325px] h-[445px] sm:h-[542px] sm:mb-32"
                         >
-                            <div className="absolute font-medium text-[17px] sm:text-[21px] mt-4 ml-4 gradient-text">
+                            <div className="absolute font-medium text-[17px] sm:text-[21px] mt-4 ml-6  gradient-text">
                                 <p>{product.brand}</p>
                             </div>
                             <div className="flex justify-end cursor-pointer mt-4 mr-2">

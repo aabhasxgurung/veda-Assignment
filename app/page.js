@@ -13,11 +13,11 @@ export default function Home() {
       <HomePage />
       <CardItem />
 
-      <div className=' mt-96 padding-x padding-y max-w mb-16'>
-        <HomeProduct />
-      </div>
 
-    </div>
+      <HomeProduct />
+
+
+    </div >
 
   )
 }

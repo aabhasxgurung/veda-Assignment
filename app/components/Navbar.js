@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <div className='flex justify-between items-center h-full relative'>
-            <div className='w-screen h-[148px] flex bg-[#380D41] absolute sm:relative'>
+            <div className='w-full h-[55px] md:h-[148px] flex justify-between overflow-hidden'>
                 <div className='lg:hidden'>
                     <button
                         className='absolute p-2 top-[100px] right-4 rounded-md z-50 bg-gray-200 text-gray-800'
@@ -39,7 +39,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li className='bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
-                                        <Link hrzef='/product' onClick={toggleMobileMenu} className='text-[32px] font-medium'>
+                                        <Link href='/product' onClick={toggleMobileMenu} className='text-[32px] font-medium'>
                                             Products
                                         </Link>
                                     </li>
@@ -55,28 +55,30 @@ const Navbar = () => {
 
                     )}
                 </div>
+
                 <Link href="/">
-                    <div className='hidden lg:block'>
+                    <div className='leading-[63.98px] flex-start md:flex-start'>
                         <Image
                             src='/images/LOGO.png'
                             width={139}
                             height={64}
                             alt=''
-                            className='ml-[175px] md:ml-[275px] lg:-[375px] mt-16 mb-10 transition-transform duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110'
+                            className='leading-[63.98px] ml-8 mt-12  hidden sm:hidden md:block'
                         />
                     </div>
                 </Link>
 
-                <div className='hidden lg:block md:block md:w-auto '>
-                    <ul className='font-medium flex flex-col p-4 md:p-2 mt-16 md:flex-row md:space-x-8'>
-                        <li className='  text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-[25px] '>
+                <div className='hidden lg:block w-full md:block md:w-auto '>
+                    <ul className='font-medium flex  flex-col p-4 md:p-2 mt-16 md:flex-row md:space-x-8'>
+                        <li className='text-[25px] leading-[38px] text-color font-semibold px-[25px] rounded-full bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 '>
                             <Link href="/homepage">Home</Link>
                         </li>
-                        <li className=' text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 '>
+                        <li className=' bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full text-[25px] text-color leading-[38px] font-semibold px-[25px] '>
                             <Link href={"/product"}>Products</Link>
                         </li>
                     </ul>
                 </div>
+
 
 
             </div >
