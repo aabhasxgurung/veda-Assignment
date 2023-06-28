@@ -39,7 +39,7 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li className='bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
-                                        <Link href='/product' onClick={toggleMobileMenu} className='text-[32px] font-medium'>
+                                        <Link hrzef='/product' onClick={toggleMobileMenu} className='text-[32px] font-medium'>
                                             Products
                                         </Link>
                                     </li>
@@ -67,12 +67,12 @@ const Navbar = () => {
                     </div>
                 </Link>
 
-                <div className='hidden lg:block '>
-                    <ul className='font-medium flex  p-4 gap-4 md:p-2 mt-16 rounded-lg md:flex-row md:space-x-8'>
-                        <li className='absolute md:right-[34.31%] text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
+                <div className='hidden lg:block md:block md:w-auto '>
+                    <ul className='font-medium flex flex-col p-4 md:p-2 mt-16 md:flex-row md:space-x-8'>
+                        <li className='  text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-[25px] '>
                             <Link href="/homepage">Home</Link>
                         </li>
-                        <li className='absolute md:right-[26.44%] text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
+                        <li className=' text-[25px] bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 '>
                             <Link href={"/product"}>Products</Link>
                         </li>
                     </ul>

@@ -71,6 +71,33 @@ html {
   }
 }
 
+.rocket {
+  cursor: pointer;
+  position: absolute;
+  top: 4527px;
+  right: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  .rocket {
+    top: 4527px;
+    right: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rocket {
+    top: 3300px;
+    right: 166px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .background {
     height: 900px;

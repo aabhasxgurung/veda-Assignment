@@ -54,8 +54,8 @@ const Footer = () => {
 
                 <div className="flex items-center justify-center mt-[100px] md:mt-0 md:w-1/4">
                     <div className="sm:right-[11.25%]">
-                        <h1 className="text-lg font-bold mb-2 text-center">Follow Us on</h1>
-                        <div className="flex space-x-2 items-center justify-center">
+                        <h1 className="text-[25px] sm:text-lg font-bold mb-2 text-center">Follow Us on</h1>
+                        <div className="flex space-x-20 mt-10 sm:mt-2 sm:space-x-2 items-center justify-center">
                             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                                 <BsFacebook size={40} />
                             </a>
@@ -69,12 +69,12 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <a href="#" onClick={scrollToTop} className="cursor-pointer md:absolute md:top-[3210px] top-[3000px] right-[5px] md:right-[166px] mt-10 md:mt-0 mr-10 md:mr-0 rocket">
+            <a href="#" onClick={scrollToTop} className='rocket'>
                 <Image src="/images/Group 202.png" alt='' width={108} height={184} className='sm:right-10 sm:w-[108px] sm:h-[184px] w-[71.65px] h-[122px]' />
             </a>
 
-            <div className="text-center bottom-0 left-0 right-0">
-                <p className="p-[39px] font-semibold">COPYRIGHT 2021 lOGO ALL RIGHT RESERVED</p>
+            <div className="text-center bottom-0 left-0 right-0 ">
+                <p className="p-[39px] font-semibold text-[18px] text-white">COPYRIGHT 2021 lOGO ALL RIGHT RESERVED</p>
             </div>
         </>
     );
