@@ -1,26 +1,58 @@
-.circle {
-  background: black;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  animation: x-axis 6s infinite linear;
-}
-.wrapper {
-  animation: y-axis 1s infinite ease-in-out;
+/* footer.css */
+
+.background {
+  position: relative;
+  background-image: url("/images/Rectangle 82.png"), url("/images/mask.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
-@keyframes x-axis {
-  50% {
-    transform: translateX(1200px);
-  }
+.mask-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
 }
-@keyframes y-axis {
-  50% {
-    transform: translateY(200px);
-  }
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
-html {
-  scroll-behavior: smooth;
+
+.footer-content .left-side {
+  display: flex;
+  align-items: center;
+}
+
+.footer-content .right-side {
+  display: flex;
+  align-items: center;
+}
+
+.footer-content .social-media-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-media-icons h1 {
+  font-weight: bold;
+  margin-right: 10px;
+  background-image: url("/image/follow.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding: 8px;
+  text-transform: uppercase;
 }
 
 #links .gradient-text {
@@ -42,24 +74,12 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
-.background {
-  background-image: url("/images/Rectangle 82.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 680px;
-  margin-bottom: 90px;
-}
-
 @media only screen and (max-width: 768px) {
   .background {
     height: 900px;
     margin-bottom: 0;
     opacity: 95%;
-    background-image: url("/images/Rectangle 126.png");
-  }
-  .rocket {
-    margin-bottom: 500px;
+    background-image: url("/image/Rectangle 126.png");
   }
 }
 
@@ -71,30 +91,16 @@ html {
   }
 }
 
-.rocket {
-  cursor: pointer;
-  position: absolute;
-  top: 4527px;
-  right: 5px;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-@media screen and (min-width: 640px) and (max-width: 767px) {
-  .rocket {
-    top: 4527px;
-    right: 5px;
-    margin-top: 10px;
-    margin-right: 10px;
+@media (min-width: 300px) {
+  #rocket .rocket .a {
+    width: 50px;
+    height: 50px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .rocket {
-    top: 3300px;
-    right: 166px;
-    margin-top: 0;
-    margin-right: 0;
+@media (max-width: 1182px) and (min-width: 760px) {
+  #rocket .texty {
+    font-size: 15px;
   }
 }
 
@@ -103,6 +109,6 @@ html {
     height: 900px;
     margin-bottom: 0;
     opacity: 95%;
-    background-image: url("/images/Rectangle 126.png");
+    background-image: url("/image/Rectangle 126.png");
   }
 }

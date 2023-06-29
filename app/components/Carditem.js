@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import './card.css';
 import axios from 'axios';
-import Image from 'next/image';
+import Image from 'next/image'
 
 const CardItem = () => {
     const [products, setProducts] = useState([]);
@@ -15,34 +15,36 @@ const CardItem = () => {
     const fetchProducts = async () => {
         try {
             const response = await axios.get('https://dummyjson.com/products/');
-            setProducts(response.data.products.slice(4, 8));
+            setProducts(response.data.products.slice(6, 10));
         } catch (error) {
             console.error('Error fetching products:', error);
         }
     };
     const handleLeftArrowClick = () => {
-        setCards((prevCards) => {
-            const updatedCards = [...prevCards];
-            const cardToMove = updatedCards.pop();
-            updatedCards.unshift(cardToMove);
-            return updatedCards;
+        setProducts((prevProducts) => {
+            const updatedProducts = [...prevProducts];
+            const productToMove = updatedProducts.pop();
+            updatedProducts.unshift(productToMove);
+            return updatedProducts;
         });
     };
 
     const handleRightArrowClick = () => {
-        setCards((prevCards) => {
-            const updatedCards = [...prevCards];
-            const cardToMove = updatedCards.shift();
-            updatedCards.push(cardToMove);
-            return updatedCards;
+        setProducts((prevProducts) => {
+            const updatedProducts = [...prevProducts];
+            const productToMove = updatedProducts.shift();
+            updatedProducts.push(productToMove);
+            return updatedProducts;
         });
     };
+
+
 
     return (
         <div id="card" className="w-full p-20 bg-[#380D41]">
             {products.length > 0 ? (
-                <div className="absolute bottom-0 overflow-hidden position">
-                    <div className="flex space-x-5 mt-[100px] sm:mt-[200px] sm:space-x-[112px]">
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 sm:translate-y-1/2 -translate-y-16 overflow-hidden">
+                    <div className="flex space-x-4 sm:mt-[200px] md:gap-[100px]  sm:gap-[10px]">
                         {products.map((product, index) => (
                             <Card
                                 key={index}
@@ -55,18 +57,18 @@ const CardItem = () => {
             ) : (
                 <p>Loading</p>
             )}
-            <div className='sm:mt-0 mt-[270px]  flex'>
+            <div className='md:mt-0 mt-[270px]   image flex'>
                 <Image
-                    src='/images/Vector.png'
-                    loading='lazy'
-                    className=' cursor-pointer flex-shrink-0 '
+                    src="/images/Vector.png"
+                    loading="lazy"
+                    className="cursor-pointer flex-shrink-0"
                     width={46.97}
                     height={46.97}
                     onClick={handleLeftArrowClick}
                 />
                 <Image
-                    src='/images/Vector (1).png'
-                    className='absolute right-0 mr-[117px] cursor-pointer flex flex-shrink-0 '
+                    src="/images/Vector (1).png"
+                    className="absolute right-0 mr-[117px] cursor-pointer flex flex-shrink-0"
                     width={46.97}
                     height={46.97}
                     onClick={handleRightArrowClick}

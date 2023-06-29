@@ -35,6 +35,36 @@
   }
 }
 
+@media (max-width: 1024px) {
+  #detail-card .gradient-border {
+    animation: none;
+    display: none;
+  }
+
+  #detail-card .gradient-border:nth-child(-n + 2) {
+    animation: slideAnimation 2s infinite;
+    display: block;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1053px) {
+  #card .image {
+    margin-top: 250px;
+  }
+}
+@media (max-width: 295px) {
+  #card .image {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 320px) {
+  #card .gradient-border {
+    width: 120px;
+    height: 200px;
+    margin-top: 150px;
+  }
+}
+
 @keyframes slideAnimation {
   0% {
     transform: translateX(200%);
@@ -82,5 +112,39 @@
   #detail-card .gradient-border:nth-child(-n + 2) {
     animation: slideAnimation 2s infinite;
     display: block;
+  }
+}
+#card .gradient-border:nth-child(n) {
+  animation: slideAnimation 2s infinite;
+}
+
+@media (max-width: 1768px) {
+  #card .gradient-border {
+    animation: none;
+    display: none;
+  }
+
+  #card .gradient-border:nth-child(-n + 2) {
+    animation: slideAnimation 2s infinite;
+    display: block;
+  }
+}
+
+@media (max-width: 532px) {
+  #card .gradient-border {
+    width: 200px;
+    height: 250px;
+  }
+}
+@media (max-width: 423px) {
+  #card .gradient-border {
+    width: 150px;
+    height: 200px;
+  }
+}
+@media (max-width: 423px) {
+  #card .img-size {
+    width: 150px;
+    height: 200px;
   }
 }
