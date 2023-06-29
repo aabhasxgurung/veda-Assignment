@@ -9,10 +9,8 @@ import Image from 'next/image';
 
 const HomeProduct = () => {
     const [products, setProducts] = useState([]);
-    const [isFilled, setIsFilled] = useState(false); // Add isFilled state
 
     useEffect(() => {
-        // Fetch the product data when the component mounts
         fetchProducts();
     }, []);
 
@@ -25,19 +23,26 @@ const HomeProduct = () => {
 
     const fetchProducts = async () => {
         try {
-            // Make an HTTP GET request to the API endpoint
             const response = await axios.get('https://dummyjson.com/products');
 
-            // Set the fetched product data in the state
-            setProducts(response.data.products.slice(0, 6)); // Display only the first 6 products
+            setProducts(response.data.products.slice(0, 6));
         } catch (error) {
-            // Handle error if request fails
             console.error('Error fetching products:', error);
         }
     };
 
-    const handleClick = () => {
-        setIsFilled(!isFilled);
+    const handleHeartClick = (productId) => {
+        setProducts((prevProducts) =>
+            prevProducts.map((product) => {
+                if (product.id === productId) {
+                    return {
+                        ...product,
+                        isHearted: !product.isHearted,
+                    };
+                }
+                return product;
+            })
+        );
     };
 
     return (
@@ -54,29 +59,19 @@ const HomeProduct = () => {
                                 <p>{product.brand}</p>
                             </div>
 
-                            <div className="flex justify-end cursor-pointer mt-4 ">
-                                {isFilled ? (
-                                    <AiFillHeart
-                                        size={35}
-                                        style={{ color: 'red' }}
-                                        onClick={handleClick}
-                                    />
+                            <div
+                                className="flex justify-end cursor-pointer mt-4 mr-2"
+                                onClick={() => handleHeartClick(product.id)}
+                            >
+                                {product.isHearted ? (
+                                    <AiFillHeart size={35} color='red' />
                                 ) : (
-                                    <AiOutlineHeart
-                                        size={35}
-                                        style={{ color: 'black' }}
-                                        onClick={handleClick}
-                                    />
+                                    <AiOutlineHeart size={35} />
                                 )}
                             </div>
                             <div className="text-center mt-10" id="product">
                                 <div className="flex justify-center items-center">
                                     <Image src={product.thumbnail} alt='' width={311} height={189} className='md:w-[311px] w-[254px] md:h-[189px] h-[154px] transition-all duration-300 ease-in-out transform hover:scale-105' />
-                                    {/* <img
-                                        src={product.thumbnail}
-                                        alt=""
-                                        className="w-[311px] h-[189px] transition-all duration-300 ease-in-out transform hover:scale-105"
-                                    /> */}
                                 </div>
                                 <h2 className="md:text-[34px] text-[29px] w-[312px] h-[55px] font-regular mt-2 md:mt-10 text-black">
                                     {truncateText(product.title, 15)}

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import './card.css';
 import axios from 'axios';
+import Image from 'next/image';
 
 const CardItem = () => {
     const [products, setProducts] = useState([]);
@@ -18,6 +19,23 @@ const CardItem = () => {
         } catch (error) {
             console.error('Error fetching products:', error);
         }
+    };
+    const handleLeftArrowClick = () => {
+        setCards((prevCards) => {
+            const updatedCards = [...prevCards];
+            const cardToMove = updatedCards.pop();
+            updatedCards.unshift(cardToMove);
+            return updatedCards;
+        });
+    };
+
+    const handleRightArrowClick = () => {
+        setCards((prevCards) => {
+            const updatedCards = [...prevCards];
+            const cardToMove = updatedCards.shift();
+            updatedCards.push(cardToMove);
+            return updatedCards;
+        });
     };
 
     return (
@@ -37,6 +55,23 @@ const CardItem = () => {
             ) : (
                 <p>Loading</p>
             )}
+            <div className='sm:mt-0 mt-[270px]  flex'>
+                <Image
+                    src='/images/Vector.png'
+                    loading='lazy'
+                    className=' cursor-pointer flex-shrink-0 '
+                    width={46.97}
+                    height={46.97}
+                    onClick={handleLeftArrowClick}
+                />
+                <Image
+                    src='/images/Vector (1).png'
+                    className='absolute right-0 mr-[117px] cursor-pointer flex flex-shrink-0 '
+                    width={46.97}
+                    height={46.97}
+                    onClick={handleRightArrowClick}
+                />
+            </div>
         </div>
     );
 };
