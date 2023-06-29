@@ -34,7 +34,7 @@ const Navbar = () => {
                                 />
                                 <ul className='flex flex-col p-4 space-y-4 mt-[82px]'>
                                     <li className='bg-gradient-to-r from-purple-900 to-pink-500 bg-clip-text text-transparent border-2 border-fuchsia-400 rounded-full px-4 flex items-center justify-center'>
-                                        <Link href='/homepage' onClick={toggleMobileMenu} className='text-[32px] font-medium'>
+                                        <Link href='/' onClick={toggleMobileMenu} className='text-[32px] font-medium'>
                                             Home
                                         </Link>
                                     </li>

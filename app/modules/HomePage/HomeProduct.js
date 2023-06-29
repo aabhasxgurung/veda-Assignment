@@ -83,7 +83,7 @@ const HomeProduct = () => {
                                 </h2>
 
                                 <div className="button-container">
-                                    <Link href={`/productDet/${product.id}`}>
+                                    <Link href={`/products/${product.id}`}>
                                         <li className="button text-[20px] md:text-[25px] font-semibold h-[70px] md:h-[86px] rounded-full py-2 px-10 md:mt-12 transition-all duration-300 ease-in-out flex justify-between items-center border-product">
                                             <span>View</span>
                                             <BsArrowRightCircle size={47} />

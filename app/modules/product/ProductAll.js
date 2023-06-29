@@ -74,7 +74,7 @@ const ProductAll = ({ selectedCategory, filterCategories }) => {
                                     {truncateText(product.title, 20)}
                                 </h2>
                                 <div className="button-container">
-                                    <Link href={`/productDet/${product.id}`}>
+                                    <Link href={`/products/${product.id}`}>
                                         <li className="button text-[20px] sm:text-[25px] font-semibold w-[278px] sm:w-[340px] h-[70px] sm:h-[86px] rounded-full py-2 px-10 mt-8 sm:mt-12 transition-all duration-300 ease-in-out flex justify-between items-center border-product ml-[17px] sm:ml-[20px]">
                                             <span>View</span>
                                             <BsArrowRightCircle size={47} />

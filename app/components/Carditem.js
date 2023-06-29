@@ -1,27 +1,27 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
-import "./card.css"
+import './card.css';
 import axios from 'axios';
 
 const CardItem = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetchProducts()
+        fetchProducts();
     }, []);
 
     const fetchProducts = async () => {
         try {
             const response = await axios.get('https://dummyjson.com/products/');
-            setProducts(response.data.products.slice(0, 4));
+            setProducts(response.data.products.slice(4, 8));
         } catch (error) {
-            console.error("Error fetching products:", error);
+            console.error('Error fetching products:', error);
         }
     };
 
     return (
-        <div id='card' className='w-full p-20 bg-[#380D41]'>
+        <div id="card" className="w-full p-20 bg-[#380D41]">
             {products.length > 0 ? (
                 <div className="absolute bottom-0 overflow-hidden position">
                     <div className="flex space-x-5 mt-[100px] sm:mt-[200px] sm:space-x-[112px]">
@@ -29,11 +29,7 @@ const CardItem = () => {
                             <Card
                                 key={index}
                                 productId={product.id}
-                                thumbnail={product.thumbnail}
-                                size={product.size}
-                                title={product.title}
-                                description={product.description}
-                                price={product.price}
+                                product={product}
                             />
                         ))}
                     </div>

@@ -24,3 +24,9 @@
   text-shadow: 8px 22px 4px #00000040;
   top: 0;
 }
+
+@media (max-width: 767px) {
+  .wrap {
+    font-size: 20px;
+  }
+}
