@@ -22,9 +22,9 @@ const HomePage = () => {
     const logoText = "Logo Electronics";
 
     return (
-        <div className='w-screen relative flex justify-center items-center mt-1.5 overflow-hidden bg-[#380D41]'>
+        <div id='header' className='w-screen relative flex justify-center items-center mt-1.5 overflow-hidden bg-[#380D41]'>
             {/* image */}
-            <div className='w-screen h-[519px] sm:h-[839px]'>
+            <div className='w-full h-[519px] sm:h-[839px]'>
                 {/* <Image src="/images/Homebg.png" alt='' width={1920} height={3774} /> */}
                 <picture>
                     <img src='/assets/image/Homebg.png' alt='Logo' className='w-full h-full mt-0 object-cover' />
@@ -63,8 +63,11 @@ const HomePage = () => {
 
                 <div className='flex items-center p-6 sm:mt-[74px]'>
                     <Link href="/product">
-                        <button className='font-routhem text-left border-[5px] sm:text-[20px] text-[15px] rounded-full text-white hover:scale-105 duration-300 ease-in-out px-10 sm:h-[82px] sm:w-[483px] h-[57px] w-[339px]  py-2 relative'>
-                            View All Products
+                        <button className='font-routhem text-left sm:text-[20px] text-[15px]  px-10 md:h-[82px] md:w-[483px] h-[57px] w-[339px] gradientButton'>
+                            <div className='gradientButtonOverlay'>
+
+                            </div>
+                            <span className='text-white hover:scale-105 duration-300 ease-in-out px-10'> View All Products</span>
                             <BsArrowRightCircle size={47} className='w-[32px] h-[32px] sm:w-[46.97px] sm:h-[46.97px] ml-[46px] absolute top-[50%] -translate-y-1/2 right-4' />
                         </button>
                     </Link>

@@ -41,9 +41,9 @@ const CardItem = () => {
 
 
     return (
-        <div id="card" className="w-full p-20 bg-[#380D41]">
+        <div id="card" className="w-full lg:p-20 px-10 py-0 bg-[#380D41]">
             {products.length > 0 ? (
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 sm:translate-y-1/2 -translate-y-16 overflow-hidden">
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 sm:translate-y-1/2 -translate-y-1/4 overflow-hidden">
                     <div className="flex space-x-4 sm:mt-[200px] md:gap-[100px]  sm:gap-[10px]">
                         {products.map((product, index) => (
                             <Card

@@ -48,14 +48,14 @@ const HomeProduct = () => {
     return (
         <div id='rubi' className="flex flex-col items-center mt-6">
             <h1 className="sm:text-[60px] text-[45px] font-routhem text-[#F903AA] font-bold sm:mt-[150px] mt-[20px] mb-14 uppercase text-wrapper trracking-widest">Products</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 md:gap-5 lg:gap-28">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-5 lg:gap-16">
                 {products.length > 0 ? (
                     products.map((product) => (
                         <div
                             key={product.id}
-                            className="bg-white rounded-[36px] shadow-md p-4 md:w-[397px] w-[325px] h-[445px] md:h-[542px] sm:mb-32"
+                            className="bg-white rounded-[36px] shadow-md p-4 lg:w-[397px] w-[325px] h-[445px] lg:h-[542px] sm:mb-10"
                         >
-                            <div className="absolute font-medium text-[17px] md:text-[21px] mt-4 ml-6 gradient-text">
+                            <div className="absolute font-medium text-[17px] lg:text-[21px] mt-4 ml-6 gradient-text">
                                 <p>{product.brand}</p>
                             </div>
 
@@ -64,25 +64,30 @@ const HomeProduct = () => {
                                 onClick={() => handleHeartClick(product.id)}
                             >
                                 {product.isHearted ? (
-                                    <AiFillHeart size={35} color='red' />
+                                    <AiFillHeart size={30} color='red' />
                                 ) : (
-                                    <AiOutlineHeart size={35} />
+                                    <AiOutlineHeart size={30} />
                                 )}
                             </div>
                             <div className="text-center mt-10" id="product">
                                 <div className="flex justify-center items-center">
-                                    <Image src={product.thumbnail} alt='' width={311} height={189} className='md:w-[311px] w-[254px] md:h-[189px] h-[154px] transition-all duration-300 ease-in-out transform hover:scale-105' />
+                                    <Image src={product.thumbnail} alt='' width={311} height={189} className='lg:w-[311px] w-[254px] lg:h-[189px] h-[154px] transition-all duration-300 ease-in-out transform hover:scale-105' />
                                 </div>
-                                <h2 className="md:text-[34px] text-[29px] w-[312px] h-[55px] font-regular mt-2 md:mt-10 text-black">
+                                <h2 className="lg:text-[34px] text-[29px] w-[312px] h-[55px] font-regular mt-2 lg:mt-10 text-black">
                                     {truncateText(product.title, 15)}
                                 </h2>
 
-                                <div className="button-container">
+                                <div className="flex items-center justify-center mt-2 ">
                                     <Link href={`/products/${product.id}`}>
-                                        <li className="button text-[20px] md:text-[25px] font-semibold h-[70px] md:h-[86px] rounded-full py-2 px-10 md:mt-12 transition-all duration-300 ease-in-out flex justify-between items-center border-product">
-                                            <span>View</span>
-                                            <BsArrowRightCircle size={47} />
-                                        </li>
+                                        <button className='text-left sm:text-[20px] px-10 gradientLink flex justify-between items-center '>
+                                            <div className='gradientLinkOverlay'>
+
+                                            </div>
+                                            <span className='text-[20px] font-semibold ml-5'>View </span>
+                                            <BsArrowRightCircle size={47} className='w-[32px] h-[32px] md:w-[46.97px] md:h-[46.97px] ml-[46px] absolute top-[50%] -translate-y-1/2 right-4' />
+
+                                        </button>
+
                                     </Link>
                                 </div>
                             </div>

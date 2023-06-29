@@ -16,7 +16,7 @@ const Footer = () => {
     return (
         < >
             <div id='rocket'
-                className="flex flex-col md:flex-row md:justify-between text-white p-10 relative background" >
+                className="flex flex-col md:flex-row md:justify-between text-white p-10 relative background mt-32" >
                 <div className="mask-image absolute top-0 left-0 w-full h-full"></div>
 
                 <div className="flex items-center md:w-1/4">
