@@ -41,7 +41,7 @@ const ProductDetails = ({ productId }) => {
                 <div className="bg-white rounded-lg shadow-md p-6 flex justify-start sm:mt-[200px] md:left-1/2 mt-[300px] w-[390px] sm:w-[1138px] h-[794px] sm:h-[436px]  gradient-border">
                     <div className="flex flex-col sm:flex-row">
                         <div>
-                            <Image src={product.thumbnail} alt={product.title} width={377} height={375} className="sm:w-[377px] sm:h-[375px] w-[324px] h-[322px]" />
+                            <Image src={product.thumbnail} alt={product.title} width={377} height={375} className="  w-full h-full object-cover object-center gradient-border" />
 
                         </div>
                         <div className="w-2/3 pl-6">
