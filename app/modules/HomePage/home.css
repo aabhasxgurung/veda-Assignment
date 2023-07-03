@@ -56,47 +56,6 @@
   }
 }
 
-/* button animation and styling for the cards */
-
-.button {
-  background: linear-gradient(
-    90deg,
-    #920aa8 2%,
-    #e019cc 20%,
-    #ff81e3 48%,
-    #fc75d6 52%,
-    #df55f6 60%,
-    #e822ec 71%,
-    #e80f91 75%,
-    #ee19d8 81.25%,
-    #f323b7 87.5%,
-    #fe3873 100%
-  );
-}
-#product li {
-  background-color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    transparent 50%,
-    #920aa8 2%,
-    #e019cc 20%,
-    #ff81e3 48%,
-    #fc75d6 52%,
-    #df55f6 60%,
-    #e822ec 71%,
-    #e80f91 75%,
-    #ee19d8 81.25%,
-    #fe3873 100%
-  );
-  background-size: 200% auto;
-  background-position: -100% 50%;
-  transition: background-position 0.5s;
-}
-
-#product li:hover {
-  background-position: 0% 50%;
-}
-
 .gradientButton {
   --b: 5px;
   padding: 10px;
@@ -231,8 +190,9 @@
 }
 .gradientLink:hover {
   color: fuchsia !important;
-  transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.5s;
   transform: scale(1.1);
+  background: white;
 }
 .gradientLink span {
   z-index: 9999;
@@ -257,10 +217,10 @@
 }
 
 .gradientLinkOverlay {
-  background: white;
-  width: 90%;
-  height: 87%;
-  --b: 5px;
+  background: transparent;
+  width: calc(90% + 20px);
+  height: calc(87% + 10px);
+  --b: 10px;
   position: absolute;
   left: -100%;
   border-radius: 50px;
